@@ -56,5 +56,17 @@
     <menuitem name="Server to list" id="my_module" parent="my_module.menu_2"
               action="my_module.action_server"/>
 
+      
+    <record model="ir.ui.view" id="sale_order_view_inherit">
+      <field name="name">sale.order.view.inherit1</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="/form/sheet/notebook/page/field[@name='order_line']/tree/field[@name='price_unit']" position="after">
+          <field name="e1_test"/>
+        </xpath>
+      </field>
+    </record>     
+      
   </data>
 </odoo>
